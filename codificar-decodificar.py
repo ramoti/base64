@@ -1,7 +1,5 @@
 import base64
 
-a = input(str("digite C para codificar ou D para decodificar um texo: "))
-
 def codificar():
     if a == "C":
         texto = input("digite o texto para codificar: ")
@@ -9,7 +7,6 @@ def codificar():
         base64_bytes = base64.b64encode(texto_bytes)
         base64_message = base64_bytes.decode('ascii')
         print(base64_message)
-codificar()
 
 def decodificar():
     if a == "D":
@@ -17,4 +14,7 @@ def decodificar():
         decodificarBytes = base64.b64decode(codigo)
         decodificarStr = str(decodificarBytes, "utf-8")
         print(decodificarStr)
+
+a = input(str("digite C para codificar ou D para decodificar um texo: "))
+codificar()
 decodificar()
